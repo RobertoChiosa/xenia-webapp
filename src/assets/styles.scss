@@ -3,3 +3,45 @@
 @use '@/assets/tailwind.css';
 @use '@/assets/layout/layout.scss';
 @use '@/assets/demo/demo.scss';
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+}
+
+
+body {
+  font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.display-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.luxury-text {
+  font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}

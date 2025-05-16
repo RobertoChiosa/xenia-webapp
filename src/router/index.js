@@ -109,12 +109,12 @@ const router = createRouter({
         {
             path: '/',
             name: 'landing',
-            component: () => import('@/views/pages/Landing.vue')
+            component: () => import('@/views/landing/Landing.vue')
         },
         {
             path: '/about',
             name: 'about',
-            component: () => import('@/views/pages/About.vue')
+            component: () => import('@/views/landing/About.vue')
         },
         {
             path: '/pages/notfound',

@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import FooterWidget from '@/components/landing/FooterWidget.vue';
 import TopbarWidget from '@/components/landing/TopbarWidget.vue';
+import LandingLayout from "@/layout/landing/LandingLayout.vue";
 </script>
 
 <template>
-    <div class="bg-surface-0 dark:bg-surface-900">
-        <div class="landing-wrapper overflow-hidden">
-            <div class="py-6 px-6 mx-0 md:mx-12 lg:mx-20 lg:px-20 flex items-center justify-between relative lg:static">
-                <TopbarWidget />
-            </div>
-            
+  <LandingLayout>
             <div class="py-12 px-6 mx-0 md:mx-12 lg:mx-20 lg:px-20">
                 <div class="text-center mb-12">
                     <h1 class="text-5xl font-bold text-surface-900 dark:text-surface-0 mb-6">La Nostra Storia Familiare</h1>
@@ -112,8 +108,5 @@ import TopbarWidget from '@/components/landing/TopbarWidget.vue';
                     </div>
                 </div>
             </div>
-            
-            <FooterWidget />
-        </div>
-    </div>
+  </LandingLayout>
 </template> 
