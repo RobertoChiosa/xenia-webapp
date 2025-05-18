@@ -1,9 +1,11 @@
 <template>
-    <div id="testimonials" class="py-20 px-6 lg:px-20 mx-0 lg:mx-20 bg-surface-50 dark:bg-surface-800">
-        <div class="max-w-6xl mx-auto">
+    <div id="testimonials" class="w-full bg-white">
+        <div class="py-20 max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-surface-900 dark:text-surface-0 mb-4">I Nostri Clienti</h2>
-                <p class="text-xl text-surface-600 dark:text-surface-400">Scopri le esperienze di chi ha scelto di collaborare con noi</p>
+                <div class="text-center mb-16">
+        <h1 class="text-2xl md:text-5xl mb-6 mt-2">I Nostri Servizi</h1>
+        <p class="text-surface-600 dark:text-surface-400">Scopri quali sono i servizi inclusi nella nostra professionalità di gestione immobiliare</p>
+      </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

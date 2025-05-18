@@ -1,21 +1,20 @@
 <template>
-  <Card>
-    <template #title>
-      <div class="flex flex-col items-center gap-4">
-        <Avatar :icon="icon" size="large" class="bg-gradient" />
-        <h3 class="text-xl font-bold text-surface-900 dark:text-surface-0 text-center">{{ title }}</h3>
+  <div class="feature-card">
+    <div class="feature-card__header">
+      <div class="feature-card__avatar" :style="{ background: gradient }">
+        <Avatar :icon="icon" size="xlarge" />
       </div>
-    </template>
-    <template #content>
-      <p class="text-surface-600 dark:text-surface-400 line-clamp-3 text-center">
+      <h3 class="feature-card__title">{{ title }}</h3>
+    </div>
+    <div class="feature-card__content">
+      <p class="feature-card__description">
         {{ description }}
       </p>
-    </template>
-  </Card>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Card from 'primevue/card';
 import Avatar from 'primevue/avatar';
 
 defineProps({
@@ -31,6 +30,10 @@ defineProps({
     type: String,
     required: true
   },
+  gradient: {
+    type: String,
+    default: 'linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%)'
+  },
   buttonLabel: {
     type: String,
     default: 'Scopri di più'
@@ -39,18 +42,59 @@ defineProps({
 </script>
 
 <style scoped>
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.feature-card {
+  border: 1px solid var(--surface-border);
+  background: var(--surface-card);
+  border-radius: 0;
+  padding: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-:deep(.p-card .p-card-body .p-card-content .p-card-title) {
-  background: gray !important;
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-:deep(.p-card .p-card-content) {
-  background: gray !important;
+.feature-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature-card__avatar {
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card__avatar :deep(.p-avatar) {
+  background: transparent;
+  color: var(--surface-700);
+}
+
+.feature-card__title {
+  color: var(--surface-900);
+  text-align: center;
+  margin: 0;
+}
+
+.dark .feature-card__title {
+  color: var(--surface-0);
+}
+
+.feature-card__content {
+  text-align: center;
+}
+
+.feature-card__description {
+  color: var(--surface-600);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dark .feature-card__description {
+  color: var(--surface-400);
 }
 </style>

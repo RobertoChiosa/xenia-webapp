@@ -27,20 +27,21 @@ function smoothScroll(id: string) {
   <div
       class="items-center bg-surface-0 dark:bg-surface-900 grow justify-between hidden lg:flex absolute lg:static w-full left-0 top-full px-12 lg:px-0 z-20 rounded-border">
     <ul class="list-none p-0 m-0 flex lg:items-center select-none flex-col lg:flex-row cursor-pointer gap-8">
-      <li>
+      <!-- <li>
         <router-link to="/" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
           <span>Home</span>
         </router-link>
-      </li>
-      <li>
+      </li> -->
+      <!-- <li>
         <router-link to="/about" class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl">
           <span>About</span>
         </router-link>
-      </li>
+      </li> -->
     </ul>
     <div class="flex py-4 lg:py-0 mt-4 lg:mt-0 gap-2">
-      <Button label="Login" text as="router-link" to="/auth/login" rounded></Button>
-      <Button label="Register" to="/auth/login" rounded></Button>
+      <a href="mailto:info@xeniapm.it" class="flex items-center">
+        <Button label="Contattaci" severity="primary" outlined></Button>
+      </a>
     </div>
   </div>
 </template>
